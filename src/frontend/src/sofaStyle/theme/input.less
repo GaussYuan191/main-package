@@ -1,0 +1,85 @@
+.input(
+  @components-disabled-color,
+  @text-color-sofa,
+  @components-bg-text-color,
+  @components-border-color,
+  @components-placeholder-color,
+  @components-hover-color,
+  @components-border-hover-color
+) {
+  .ant-input-group-addon {
+    color: @text-color-sofa !important;
+    background-color: @components-disabled-color !important;
+    border: 0 solid @components-disabled-color;
+  }
+
+  .ant-input-group {
+    border: 1px solid;
+  }
+
+  .ant-input-affix-wrapper .ant-input:not(:last-child):hover {
+    border-color: @components-hover-color;
+  }
+
+  .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+    border-color: @components-border-color;
+    border-right-width: 1px !important;
+  }
+
+  /*input-disable 颜色重置*/
+  .ant-input[disabled] {
+    background-color: @components-disabled-color !important;
+    cursor: not-allowed;
+    opacity: 1;
+    border: 1px solid @components-disabled-color;
+    color: @text-color-sofa;
+  }
+
+  .ant-input[readonly] {
+    background-color: @components-disabled-color !important;
+  }
+
+  .ant-calendar-picker .ant-input[readonly] {
+    background-color: transparent !important;
+  }
+
+  //type类型为checkbox样式
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background: @components-bg-text-color !important;
+  }
+
+  .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner::after {
+    border-bottom-color: @components-border-hover-color !important;
+    border-right-color: @components-border-hover-color !important;
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+  }
+
+  .ant-input:hover,
+  .sofaTheme .ant-input:focus,
+  .sofaTheme .ant-input-focused {
+    //border-top: 1px solid @components-border-hover-color;
+  }
+
+  //input placeholder颜色
+  input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: @components-placeholder-color !important;
+  }
+  input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: @components-placeholder-color !important;
+  }
+  input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: @components-placeholder-color !important;
+  }
+  //textarea  placeholder颜色
+  textarea::-webkit-input-placeholder {
+    color: @components-placeholder-color;
+  }
+
+  .ant-input-group > .ant-input:last-child:hover {
+    border-top: 1px solid @components-hover-color;
+  }
+}

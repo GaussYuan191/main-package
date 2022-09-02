@@ -1,0 +1,276 @@
+// @import './params';
+
+.customAntd(
+  @primary-color,
+  @table-cell-background-sofa,
+  @text-color-sofa,
+  @error-color,
+  @components-border-color,
+  @components-bg-text-color
+) {
+  /**外层行样式重置*/
+  .rowStyle {
+    .inputSearch {
+      display: inline-block;
+      vertical-align: -5px;
+      color: @primary-color;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .button {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 6px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 8px;
+    }
+  }
+
+  /**弹框内元素的样式重置*/
+  .modalStyle {
+    .ant-modal-body {
+      max-height: 700px;
+      overflow-y: auto;
+      position: relative;
+      background-color: @components-bg-text-color;
+    }
+
+    .has-error .ant-form-explain,
+    .has-error .ant-form-split {
+      color: @error-color;
+    }
+
+    .ant-modal-content {
+      //background-color: @modal-content-footer-bg-sofa !important;
+      .ant-modal-footer {
+        padding: 26px 16px !important;
+        text-align: center !important;
+        border-radius: 0 0 20px 20px;
+        background-color: @components-bg-text-color !important;
+        border-top: 1px solid  @components-border-color !important;
+      }
+    }
+
+    /*重置Col*/
+
+    .hr {
+      border-bottom: 1px solid  @components-border-color;
+      margin-bottom: 12px;
+
+      &:last-of-type {
+        border-bottom: 1px solid transparent;
+        margin-bottom: 0;
+      }
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .last {
+      position: absolute;
+      right: -76px;
+      top: 5px;
+    }
+  }
+
+  /*重置button*/
+  .button,
+  .modalStyle,
+  .ant-modal-confirm-btns,
+  .ant-modal-content {
+    .ant-btn {
+      min-width: 100px;
+    }
+  }
+
+  /**buttongroup圆角重置*/
+  .ant-btn-group > .ant-btn:first-child:not(:last-child),
+  .ant-btn-group > span:first-child:not(:last-child) > .ant-btn {
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+  }
+
+  .ant-btn-group > .ant-btn:last-child:not(:first-child),
+  .ant-btn-group > span:last-child:not(:first-child) > .ant-btn {
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  // /*重置tab*/
+  // .ant-tabs-nav .ant-tabs-tab {
+  //   // padding: 8px 22px;
+  //   // margin-right: 1px;
+  // }
+
+  /*重置表格分页总条数样式*/
+  .ant-pagination-total-text {
+    position: absolute;
+    left: 0;
+  }
+
+  /*消息提示框*/
+  // .ant-message-notice-content {
+  //   padding: 0;
+  //   background: rgba(0, 0, 0, 0) !important;
+
+  //   /*消息成功*/
+  //   .ant-message-success {
+  //     min-width: 440px;
+  //     border-radius: 4px;
+  //     padding: 9px 12px;
+  //     text-align: left;
+  //     box-sizing: border-box;
+  //   }
+
+  //   /*消息失败*/
+  //   .ant-message-error {
+  //     min-width: 440px;
+  //     border-radius: 4px;
+  //     padding: 9px 12px;
+  //     text-align: left;
+  //     box-sizing: border-box;
+  //   }
+
+  //   .ant-message-warning {
+  //     min-width: 440px;
+  //     border-radius: 4px;
+  //     padding: 9px 12px;
+  //     text-align: left;
+  //     box-sizing: border-box;
+  //   }
+  // }
+
+  /*message-config重置*/
+  .ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+    margin: 22px 0;
+  }
+
+  /*message-config-body重置*/
+  .ant-modal-confirm .ant-modal-body {
+    padding: 34px 32px 34px;
+    border-radius: 10px;
+
+    .ant-modal-confirm-body {
+      padding: 24px 0 36px;
+    }
+
+    .ant-modal-confirm-btns {
+      margin-top: 24px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .marBotton {
+    margin-bottom: 8px;
+  }
+
+  .searchFrom {
+    position: absolute;
+    margin-left: -80px;
+
+    .inputSearch {
+      margin-bottom: 10px;
+    }
+
+    span {
+      margin-right: 4px;
+    }
+  }
+
+  .headerTitle {
+    position: relative;
+    left: -16px;
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    padding-right: 18px;
+  }
+
+  //  表单验证错误样式重置
+  .ant-form-item-required {
+    &:before {
+      margin-left: -1em;
+    }
+  }
+
+  .ant-form-explain {
+    position: absolute;
+    top: 2px;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline;
+    margin-left: 10px;
+    z-index: 100;
+  }
+
+  .has-error .ant-form-explain {
+    background-color: @error-color;
+    //color: #fbc0c0 !important;
+    &:before {
+      content: '';
+      display: inline-block;
+      border: 6px solid transparent;
+      border-right-color: @error-color;
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      margin-top: -6px;
+    }
+  }
+  .ant-form-item-children {
+    width: 100%;
+    display: inline-block;
+  }
+  .has-error {
+    white-space: nowrap;
+  }
+  .ant-form-item-control {
+    line-height: 1 !important;
+  }
+  .ant-form-item-control li:first-child {
+    line-height: 30px;
+  }
+  body {
+    .ant-modal-wrap {
+      overflow: hidden;
+    }
+  }
+  .ant-input-number-input-wrap input {
+    padding-right: 32px;
+  }
+  .ant-input-number-handler-wrap {
+    opacity: 1;
+  }
+  .ant-input,
+  .ant-input-number-input {
+    text-align: inherit;
+  }
+  .ant-input-number-handler {
+    .ant-input-number-handler-up-inner,
+    .ant-input-number-handler-down-inner {
+      color: rgba(255, 255, 255, 0.65);
+    }
+  }
+  .ant-input-number-disabled .ant-input-number-handler-wrap {
+    display: block;
+    background-color: transparent;
+    pointer-events: none;
+  }
+  // .ant-picker {
+  //   width: 100%;
+  // }
+  // 复写tranfarDown 组件的底色
+  // .fade-layout {
+  //   background: @table-cell-background-sofa;
+  // }
+
+  // .darkStyle.blue .fade-button {
+  //   background:  @components-border-color;
+  //   color: @text-color-sofa;
+  // }
+}

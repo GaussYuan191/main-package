@@ -1,0 +1,30 @@
+/*左右分列布局*/
+.layoutColumns {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  .side {
+    width: 213px;
+    overflow: hidden;
+    background: #323b54;
+    margin-right: 10px;
+    // overflow-y: scroll;
+  }
+
+  .main {
+    flex: 1;
+    overflow: hidden;
+    // margin-top: 8px;
+  }
+}
+
+/*一列布局*/
+.layoutRow {
+  width: 98%;
+  margin: 16px auto 0;
+}
+.ant-table {
+  min-height: auto !important;
+}
+

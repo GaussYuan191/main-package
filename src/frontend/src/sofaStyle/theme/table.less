@@ -1,0 +1,257 @@
+// @import '../params';
+
+.table(
+  @components-bg-text-color,
+  @components-divider-border-color,
+  @scroll-color,
+  @other-table-scroll-bg,
+  @other-table-header-bg,
+  @text-color-sofa,
+  @components-border-color,
+  @other-bg-hover,
+  @other-color-hover
+) {
+  .ant-table-container {
+    border: 1px solid transparent;
+  }
+  .yss-configable-table {
+    height: 100%;
+    .yss-configable-table-inner,
+    .ant-spin-nested-loading,
+    .ant-spin-container,
+    .ant-table,
+    .ant-table-container,
+    .ant-table-content,
+    table {
+      height: 100%;
+    }
+    .ant-table-body {
+      height: calc(100% - 28px);
+      > table {
+        height: auto;
+      }
+    }
+  }
+  .ant-table-container {
+    border-color: @other-bg-hover;
+  }
+  .ant-spin-nested-loading {
+    border: 1px solid @other-bg-hover !important;
+  }
+  .stripe-table .ant-table-tbody .ant-table-row:not(.ant-table-row-selected) > td {
+    background: @components-bg-text-color !important;
+    color: @text-color-sofa !important;
+  }
+  .stripe-table .ant-table-tbody .ant-table-row > td {
+    background-color: @components-bg-text-color !important;
+    color: @text-color-sofa !important;
+  }
+
+  .ant-table .ant-table-tbody .ant-table-row.ant-table-row-selected > td {
+    background-color: @other-bg-hover !important;
+    border-color: @other-bg-hover !important;
+  }
+
+  .table-btn .ant-btn-link .anticon {
+    color: @text-color-sofa !important;
+  }
+
+  .columnBotton {
+    > span {
+      border-color: @other-bg-hover;
+      background-color: @other-bg-hover;
+    }
+  }
+  .yss-biz-table-click-tr td {
+    background-color: @other-bg-hover !important;
+  }
+  .ant-table-bordered .ant-table-tbody > tr > td {
+    border-right: 1px solid @components-divider-border-color !important;
+    border-bottom: 1px solid @components-divider-border-color !important;
+  }
+  .ant-table-bordered .ant-table-thead > tr > th,
+  .ant-table-bordered .ant-table-tbody > tr > td {
+    border-right: 1px solid @components-divider-border-color !important;
+  }
+
+  .ant-table-bordered .ant-table-thead > tr:not(:last-child) > th {
+    border-bottom: 1px solid transparent;
+  }
+
+  .ant-table-fixed-header .ant-table-fixed-right .ant-table-body-outer .ant-table-fixed {
+    border: 1px solid transparent !important;
+    border-left-color: @other-bg-hover !important ;
+  }
+  .ant-table-bordered .ant-table-header > table,
+  .ant-table-bordered .ant-table-body > table,
+  .ant-table-bordered .ant-table-fixed-left table,
+  .ant-table-bordered .ant-table-fixed-right table {
+    border-left-color: @other-bg-hover !important ;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+  }
+  .ant-checkbox-inner {
+    background-color: @components-bg-text-color !important;
+    border: 1px solid @scroll-color !important;
+    border-radius: 2px;
+    border-collapse: separate;
+    width: 14px;
+    height: 14px;
+  }
+
+  /*表格复选框重置*/
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: @other-color-hover !important;
+    border-color: @other-color-hover !important;
+  }
+  .ant-checkbox-checked::after {
+    border-color: @other-color-hover;
+  }
+
+  .ant-checkbox-indeterminate .ant-checkbox-inner::after {
+    background-color: @other-color-hover;
+    border: 0;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    //border: 2px solid #52659c;
+    border-top: 0 !important;
+    border-left: 0 !important;
+  }
+
+  .ant-checkbox-wrapper.ant-checkbox-wrapper-disabled {
+    .ant-checkbox-inner {
+      //background-color: @components-border-color !important;
+      border: 1px solid @scroll-color !important;
+    }
+  }
+
+  .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover {
+    background: transparent;
+  }
+  .ant-table.ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body,
+  .ant-table .ant-table-fixed-left table,
+  .ant-table .ant-table-fixed-right table {
+    background-color: @other-table-scroll-bg;
+  }
+
+  *:hover::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background-color: @other-table-scroll-bg;
+  }
+
+  *:hover::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: @scroll-color;
+    border: 3px solid @other-table-scroll-bg;
+  }
+
+  .ant-table-thead > tr > th {
+    background: @other-table-header-bg !important;
+    color: @text-color-sofa !important;
+  }
+
+  .ant-table-thead > tr > th .ant-table-header-column .ant-table-column-sorters:hover::before {
+    background: @other-bg-hover !important;
+  }
+
+  .ant-table-header {
+    background: @other-bg-hover !important;
+  }
+
+  .columnSelection {
+    border: 1px solid @other-bg-hover;
+    background: @components-bg-text-color;
+    color: @text-color-sofa;
+  }
+
+  .columnSelection .butGroup {
+    background: @other-bg-hover;
+    border-top: 1px solid @other-bg-hover;
+  }
+
+  .ant-table-bordered .ant-table-header > table,
+  .ant-table-bordered .ant-table-body > table,
+  .ant-table-bordered .ant-table-fixed-left table,
+  .ant-table-bordered .ant-table-fixed-right table {
+    border-bottom-color: @components-divider-border-color !important;
+    border-top-color: @components-divider-border-color !important;
+  }
+  // 表尾样式
+  .ant-table .ant-table-footer {
+    background: @other-table-header-bg !important;
+    color: @text-color-sofa !important;
+  }
+  // 去除上方横线
+  .ant-table .ant-table-footer::before {
+    background: transparent
+  }
+  // 去除边框
+  .ant-table .ant-table-bordered .ant-table-footer {
+    // border: 1px solid @components-divider-border-color !important;
+    // border-top: 1px solid @components-divider-border-color !important;
+    // border-left-color: @other-bg-hover !important ;
+    border: none !important;
+
+  }
+  .darkStyle
+    .ant-table-thead
+    > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td,
+  .darkStyle
+    .ant-table-tbody
+    > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td,
+  .darkStyle
+    .ant-table-thead
+    > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td,
+  .darkStyle
+    .ant-table-tbody
+    > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+    > td {
+    background: @other-bg-hover !important;
+  }
+
+  .ant-table .ant-table-placeholder {
+    background: @components-bg-text-color;
+  }
+
+  // 复写表格的 table 的边框颜色
+  .ant-table-bordered.ant-table-empty .ant-table-placeholder {
+    border-right: 0px solid @other-bg-hover !important;
+    border-left: 0px solid @other-bg-hover !important;
+  }
+
+  .ant-table-row-expand-icon {
+    background: @components-bg-text-color !important;
+  }
+
+  /*表格展开图标边框线*/
+  .ant-table-row-expand-icon:focus,
+  .ant-table-row-expand-icon:hover,
+  .ant-table-row-expand-icon:active {
+    border-color: @other-bg-hover;
+    color: @other-bg-hover;
+  }
+
+  tr.ant-table-expanded-row,
+  tr.ant-table-expanded-row:hover {
+    background: @components-bg-text-color !important;
+  }
+
+  .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-up.on,
+  .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-down.on {
+    color: grey !important;
+  }
+}

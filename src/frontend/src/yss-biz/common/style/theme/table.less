@@ -1,0 +1,85 @@
+.ant-table-container {
+  border: 1px solid transparent;
+}
+.yss-configable-table {
+  height: 100%;
+  .yss-configable-table-inner,
+  .ant-spin-nested-loading,
+  .ant-spin-container,
+  .ant-table,
+  .ant-table-container,
+  .ant-table-content,
+  table {
+    height: 100%;
+  }
+  .ant-table-body {
+    height: calc(100% - 28px);
+    > table {
+      height: auto;
+    }
+  }
+}
+.darkStyle.blue {
+  .ant-table-container {
+    border-color: #1771a3;
+  }
+  .ant-spin-nested-loading{
+    border: 1px solid #1771a3 !important;
+  }
+  .stripe-table .ant-table-tbody .ant-table-row:not(.row-selected) > td{
+    color: #B5D8FF !important;
+  }
+  .columnBotton {
+    > span {
+      border-color: #1771a3;
+      background-color: #444e69;
+    }
+  }
+  .yss-biz-table-click-tr td{
+    background-color: #24376c !important;
+  }
+  .ant-table-bordered .ant-table-tbody > tr > td{
+    border-right: 1px solid rgba(23,113,163,.4) !important;
+    border-bottom: 1px solid rgba(23,113,163,.4) !important;
+  }
+  .ant-table-bordered .ant-table-thead > tr > th, .ant-table-bordered .ant-table-tbody > tr > td{
+    border-right: 1px solid rgba(23,113,163,.4) !important;
+  }
+  .ant-table-fixed-header .ant-table-fixed-right .ant-table-body-outer .ant-table-fixed {
+    border: 1px solid transparent !important;
+    border-left-color:#1771a3 !important ;
+  }
+  .ant-table-fixed-header .ant-table-fixed-left .ant-table-body-outer .ant-table-fixed {
+    border: 1px solid transparent !important;
+  }
+  .ant-table-bordered .ant-table-header > table, .ant-table-bordered .ant-table-body > table, .ant-table-bordered .ant-table-fixed-left table, .ant-table-bordered .ant-table-fixed-right table {
+    border-left-color:#1771a3 !important ;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+  }
+  .ant-checkbox-inner{
+    background-color: #233C5B !important;
+    border: 1px solid #1771A3 !important;
+    border-radius: 2px;
+    border-collapse: separate;
+    width: 14px;
+    height: 14px;
+  }
+
+
+  .ant-table-bordered.ant-table-empty .ant-table-placeholder{
+    border-right: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+  }
+
+  .ant-checkbox-wrapper.ant-checkbox-wrapper-disabled {
+    .ant-checkbox-inner{
+      background-color: #999  !important;
+      border: 1px solid #48587e  !important;
+    }
+  }
+
+  .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover{
+    background: transparent;
+  }
+}

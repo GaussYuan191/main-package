@@ -1,0 +1,42 @@
+// @import '../params';
+
+.pagination(
+  @component-bg-secondary,
+  @text-color-sofa,
+  @components-border-hover-color,
+  @components-bg-text-color
+) {
+  .ant-pagination-item a {
+    color: @text-color-sofa !important;
+  }
+
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    color: @text-color-sofa !important;
+  }
+
+  .ant-pagination-item-active {
+    border: 0;
+    background: @component-bg-secondary !important;
+    a{
+      color: @components-bg-text-color !important;
+    }
+
+  }
+
+  .ant-pagination.mini .ant-pagination-options-quick-jumper {
+    color: @text-color-sofa;
+  }
+  .ant-pagination-options-quick-jumper input {
+    background-color: @components-bg-text-color;
+    color: @text-color-sofa;
+    border: 1px solid @text-color-sofa;
+  }
+  .ant-pagination-options-quick-jumper input:hover,
+  .ant-pagination-options-quick-jumper input:focus {
+    border-color: @components-border-hover-color;
+  }
+  .ant-pagination.mini .ant-pagination-total-text{
+    color: @text-color-sofa !important;
+  }
+}

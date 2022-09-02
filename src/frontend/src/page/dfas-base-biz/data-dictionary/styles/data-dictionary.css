@@ -1,0 +1,7 @@
+.data-dictionary .ant-form {
+  margin: 5px;
+}
+
+.data-dictionary .data-dictionary-right {
+  border-left: 10px solid var(--body-background);
+}

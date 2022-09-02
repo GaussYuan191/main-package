@@ -1,0 +1,52 @@
+.flows {
+  list-style: none;
+  display: inline-block;
+}
+.flows > li {
+  float: left;
+  padding: 3px 8px;
+  background-color: #888888;
+  margin: 5px 15px 5px 0;
+  position: relative;
+  color: white !important;
+}
+.flows > li.active {
+  background-color: #4ab75c;
+}
+.flows > li.error {
+  background-color: #fc5660;
+}
+.flows > li.handle {
+  background-color: #1890ff;
+}
+.flows > li:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: -20px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 8px solid #555;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.flows > li:last-child::after {
+  border: 0;
+}
+
+.hoverUL {
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+.ant-tooltip-inner p.active {
+  color: #4ab75c;
+}
+.ant-tooltip-inner p.error {
+  color: #fc5660;
+}
+.ant-tooltip-inner p.handle {
+  color: #1890ff;
+}

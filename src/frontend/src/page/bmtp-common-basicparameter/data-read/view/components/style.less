@@ -1,0 +1,37 @@
+.taskListTitle {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid @border-color-base;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: @label-color;
+  line-height: 1;
+}
+
+.readFileContent {
+  padding: 20px;
+  display: flex;
+  border-bottom: 1px solid @border-color-base;
+  .realFileLeft {
+    margin-right: 20px;
+    .itemReadTop {
+      display: flex;
+      align-items: center;
+    }
+    .mustCondition {
+      font-size: 14px;
+      color: @label-color;
+      line-height: 1;
+      position: relative;
+      &::after {
+        content: '*';
+        display: block;
+        position: absolute;
+        color: red;
+        font-size: 14px;
+        top: 5px;
+        left: -10px;
+      }
+    }
+  }
+}

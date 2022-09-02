@@ -1,0 +1,44 @@
+.system-menu-left {
+  background-color: var(--component-background, component-background);
+  border-right: 5px solid var(--body-background, @body-background);
+  padding: 0 0 0 6px;
+  margin: 5px 0;
+  width: 300px;
+  height: calc(100% - 10px);
+  float: left;
+  overflow: hidden;
+}
+
+.system-menu-left .tree-top-tools {
+  margin: 0 -5px 5px -5px;
+  position: relative;
+  background-color: var(--table-header-bg, @table-header-bg);
+}
+
+.system-menu-left .tree-content-scroll {
+  height: calc(100% - 87px);
+  overflow: auto;
+  margin: 5px 0;
+}
+
+.system-menu-left .ant-tree {
+  margin-right: 6px;
+}
+
+.system-menu-right {
+  width: calc(100% - 300px);
+  float: left;
+  margin-top: 5px;
+}
+
+.system-menu-right .table-title {
+  background-color: var(--component-background, @component-background);
+  padding: 6px;
+  position: relative;
+}
+
+.system-menu-right .table-title .table-title-tools {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+}

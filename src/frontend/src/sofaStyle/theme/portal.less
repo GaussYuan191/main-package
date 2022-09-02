@@ -1,0 +1,78 @@
+.portal(
+  @portal-header-bg,
+  @components-hover-color,
+  @other-portal-menu-bg,
+  @components-bg-text-color,
+  @portal-tabs-bg
+) {
+  .win-header {
+    background: @portal-header-bg;
+  }
+
+  .win-header .win-menu-bar {
+    color: @components-bg-text-color !important;
+  }
+
+  .win-single-page-tabs {
+    background: @portal-tabs-bg;
+  }
+
+  .win-multi-page-tabs {
+    background: @components-bg-text-color;
+  }
+
+  .win-menu-tabs.ant-tabs.ant-tabs-card > .ant-tabs-bar.ant-tabs-card-bar {
+    background: @portal-tabs-bg !important;
+  }
+
+  .win-single-page-tabs .ant-tabs-nav-scroll,
+  .win-multi-page-tabs .ant-tabs-nav-scroll {
+    background: @portal-tabs-bg;
+  }
+
+  .win-single-page-tabs .menu-tools,
+  .win-multi-page-tabs .menu-tools {
+    background-color: @other-portal-menu-bg !important;
+    color: @text-color-sofa;
+    &:hover {
+      color: @components-hover-color;
+    }
+  }
+
+  .win-single-page-tabs .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab:hover,
+  .win-single-page-tabs .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active,
+  .win-multi-page-tabs .win-menu-tabs.ant-tabs > .ant-tabs-card-bar .ant-tabs-tab:hover,
+  .win-multi-page-tabs .win-menu-tabs.ant-tabs > .ant-tabs-card-bar .ant-tabs-tab-active {
+    color: @text-color-sofa;
+  }
+
+  .win-header .user-content .user-info:hover > span,
+  .win-header .user-content .user-info:hover > .anticon {
+    color: @components-bg-text-color;
+  }
+
+  .win-menu-drawer .win-menu-item:hover,
+  .win-menu-drawer .win-menu-item.menu-active,
+  .win-sub-menu-group .sub-menu-item:not(.menu-disabled):not(.menu-has-open):hover,
+  .win-sub-menu-group .sub-menu-item.menu-has-open {
+    background-color: @portal-header-bg !important;
+    color: @components-bg-text-color;
+  }
+
+  .sub-menu-item .anticon-star,
+  .win-menu-item.menu-active .anticon {
+    color: @components-bg-text-color;
+  }
+
+  .ant-drawer-body .ant-input-group-addon {
+    width: 24px;
+  }
+
+  .win-sub-menu-group .sub-menu-title {
+    color: @text-color-sofa;
+  }
+
+  .win-header .user-content {
+    height: 48px;
+  }
+}

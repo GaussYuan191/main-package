@@ -1,0 +1,84 @@
+.button(
+  @other-button-bg,
+  @other-button-border-color,
+  @text-color-sofa,
+  @components-disabled-color,
+  @components-bg-text-color,
+  @components-hover-color
+) {
+  .darkStyle .ant-btn-group > .ant-btn {
+    border-color: transparent !important;
+    &:before {
+      content: '';
+      position: relative;
+      top: 3px;
+      left: -15px;
+      display: inline-block;
+      vertical-align: top;
+      // width: 1px;
+      width: 0;
+      height: 16px;
+    }
+  }
+  body .darkStyle .ant-btn.ant-btn-link {
+    background-color: transparent;
+    border: 0;
+  }
+  .darkStyle .ant-btn-group > .ant-btn:first-child:not(:last-child),
+  .darkStyle .ant-btn-group > span:first-child:not(:last-child) > .ant-btn {
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+  }
+  .darkStyle .ant-btn-group > .ant-btn:last-child:not(:first-child),
+  .darkStyle .ant-btn-group > span:last-child:not(:first-child) > .ant-btn {
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+  // .darkStyle {
+  .ant-btn:not(.ant-btn-primary):not(.ant-btn-dangerous):not(.ant-btn-link) {
+    background-color: @other-button-bg !important;
+    border: 1px solid @other-button-border-color !important;
+    color: @text-color-sofa;
+    &:focus,
+    &:hover {
+      color: @components-hover-color !important;
+      background-color: @components-bg-text-color!important;
+    }
+    &:focus {
+      background-color: @other-button-bg !important;
+      color: @text-color-sofa !important;
+    }
+  }
+  .ant-btn-primary {
+    background-color: @other-button-bg !important;
+    border: 1px solid @other-button-border-color !important;
+    color: @text-color-sofa;
+    &:focus,
+    &:hover {
+      color: @components-hover-color!important;
+      background-color: @components-bg-text-color!important;
+    }
+  }
+  .ant-btn-group > .ant-btn:not(:first-child) {
+    &:before {
+      //background-color: #07d3ff;
+    }
+  }
+  //表格内button样式
+  .ant-btn-link {
+    border: none;
+    background-color: transparent;
+    color: @text-color-sofa !important;
+    &:hover {
+      color: @text-color-sofa !important;
+    }
+  }
+  .ant-btn[disabled] {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: @components-disabled-color !important;
+  }
+  .ant-btn-dangerous {
+  }
+
+}

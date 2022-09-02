@@ -1,0 +1,203 @@
+.f-clearfix {
+  &:after {
+    content: '';
+    clear  : both;
+    display: block;
+    zoom   : 1;
+  }
+}
+
+.f-block {
+  display: block;
+}
+
+.f-block-hide {
+  display : block;
+  overflow: hidden;
+}
+
+.f-flex-center {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.f-flex-item {
+  flex: 1;
+}
+
+.f-pt5 {
+  padding-top: 5px;
+}
+
+.f-pb5 {
+  padding-bottom: 5px;
+}
+
+
+.f-pl5 {
+  padding-left: 5px;
+}
+
+.f-pr5 {
+  padding-right: 5px;
+}
+
+.f-pl10 {
+  padding-left: 10px;
+}
+
+.f-pr10 {
+  padding-right: 10px;
+}
+
+.f-ml5 {
+  margin-left: 5px;
+}
+
+.f-mr5 {
+  margin-right: 5px;
+}
+
+.f-ml10 {
+  margin-left: 10px;
+}
+
+.f-mr10 {
+  margin-right: 10px;
+}
+
+.f-ml20 {
+  margin-left: 20px;
+}
+
+.f-mr20 {
+  margin-right: 20px;
+}
+
+.f-ml25 {
+  margin-left: 25px;
+}
+
+.f-mr25 {
+  margin-right: 25px;
+}
+
+.f-mt5 {
+  margin-top: 5px;
+}
+
+.f-mb5 {
+  margin-bottom: 5px;
+}
+
+.f-mt10 {
+  margin-top: 10px;
+}
+
+.f-mb10 {
+  margin-bottom: 10px;
+}
+
+// .mt20 {
+//     margin-top: 20px;
+// }
+
+// .mb20 {
+//     margin-bottom: 20px;
+// }
+
+.f-mt30 {
+  margin-top: 30px;
+}
+
+.f-mb30 {
+  margin-bottom: 30px;
+}
+
+.f-ml30 {
+  margin-left: 30px;
+}
+
+.f-mr30 {
+  margin-right: 30px;
+}
+
+.f-topNeg1 {
+  top: -1px;
+}
+
+.f-topNeg2 {
+  top: -2px;
+}
+
+.f-topNeg3 {
+  top: -3px;
+}
+
+.f-top1 {
+  top: 1px;
+}
+
+.f-top2 {
+  top: 2px;
+}
+
+.f-top3 {
+  top: 3px;
+}
+
+.f-tab-space {
+  padding: 10px;
+}
+
+.s-line {
+  border-right: 1px solid #22283c;
+}
+
+.u-line {
+  border-bottom: 1px solid #22283c;
+}
+
+.u-hr {
+  border-bottom: 1px solid #4c515f;
+}
+
+.postionMixin() {
+  @directionList: left,
+  right,
+  center;
+
+  .loop(@i) when (@i < length(@directionList) + 1) {
+    @direction: extract(@directionList, @i);
+
+    .f-text-@{direction} {
+      text-align: @direction;
+    }
+
+    .ifDirection(@direction) when (@i<3) {
+      .f-@{direction} {
+        float: @direction
+      }
+    }
+
+    .ifDirection(@direction);
+    .loop(@i+1);
+  }
+
+  @positionList: relative, absolute, fixed;
+
+  .loop(@i) when (@i < length(@positionList) + 1) {
+    @position: extract(@positionList, @i);
+
+    .f-@{position} {
+      position: @position;
+    }
+
+    .loop(@i+1);
+  }
+
+  .loop(1);
+}
+
+.postionMixin();

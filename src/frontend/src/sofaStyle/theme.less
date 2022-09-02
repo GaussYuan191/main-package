@@ -1,0 +1,214 @@
+// @import './params';
+
+.theme(
+  @components-bg-text-color,
+  @text-color-sofa,
+  @other-button-bg,
+  @components-hover-color,
+  @other-page-selection,
+  @other-button-border-color,
+  @page-footer-bg,
+  @components-border-hover-color,
+  @components-hover-color,
+  @other-table-column-light-color
+) {
+  /**暗色系*/
+  .darkStyle {
+    height: 100%;
+    .buttonChildren {
+      position: absolute;
+      top: 30px;
+      right: -19px;
+      background: @components-bg-text-color !important;
+      border-radius: 2px;
+      font-size: 12px;
+      border: 1px solid @components-border-hover-color !important;
+      display: none;
+      color: @text-color-sofa !important;
+      box-shadow: 1px 1px 3px @components-border-hover-color !important;
+      &:hover {
+        display: block !important;
+      }
+    }
+
+    .exportBtn {
+      height: 32px;
+      padding: 0 15px;
+      position: relative;
+      // z-index: 10;
+      display: inline-block;
+      background-color: @other-button-bg !important;
+      border: 1px solid @other-button-border-color !important;
+      color: hsl(0, 0%, 0%);
+      //color: @primary-color;
+      line-height: 32px;
+      left: -1px;
+      top: 1px;
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      .anticon {
+        color: @text-color-sofa;
+      }
+      &:hover {
+        background-color: @components-bg-text-color !important;
+        // color: hsl(0, 0%, 0%) !important;
+        color: @components-hover-color;
+        .anticon {
+          color: @components-hover-color;
+        }
+        .buttonChildren {
+          display: block;
+        }
+        .buttonChildrenItem:hover {
+          color: @components-hover-color !important;
+        }
+      }
+    }
+
+    .moreBtn {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 1px;
+        z-index: 10;
+        display: inline-block;
+        vertical-align: top;
+        //width: 1px ;
+        width: 0;
+        height: 16px;
+        //background-color: #07d3ff;
+        line-height: 32px;
+        opacity: 0.35;
+      }
+      &:hover {
+        background-color: @components-bg-text-color !important;
+      }
+    }
+
+    .ant-btn:not([disabled]):hover {
+      .buttonChildren {
+        display: block;
+      }
+      .buttonChildrenItem:hover {
+        color: @components-hover-color;
+      }
+    }
+
+    .buttonChildrenItem {
+      padding: 0 12px;
+      text-align: center;
+      line-height: 29px;
+      height: 29px;
+      background: @components-bg-text-color;
+    }
+
+    /***标题背景**/
+    .headerTitle {
+      background: #0a0f0e;
+    }
+
+    /**buttongroup 颜色重置*/
+    .ant-btn:not(.ant-btn-dangerous):not(.ant-btn-primary) {
+      color: @text-color-sofa;
+      // .anticon {
+      //   color: @ant-btn-anticon-sofa;
+      // }
+      &.ant-btn-primary {
+        color: @components-bg-text-color;
+      }
+      &:hover {
+        .anticon {
+          color: @components-hover-color;
+        }
+      }
+    }
+  }
+
+  //Modal底部按钮
+  .modalStyle {
+    .ant-modal-footer {
+      .ant-btn {
+        background: @components-bg-text-color;
+      }
+      .ant-btn-primary {
+        //background: @primary-color-sofa;
+      }
+    }
+  }
+  .rowStyle {
+    .ant-btn {
+      background: @components-bg-text-color;
+    }
+    .ant-btn-primary {
+      //background: @primary-color-sofa;
+    }
+  }
+
+  .treeExpand {
+    color: @text-color-sofa;
+  }
+
+  .treeExpand:hover,
+  .treeExpand:hover .anticon {
+    color: @components-hover-color;
+  }
+
+  .darkStyle .exportBtn:hover .buttonChildrenItem:hover {
+    color: @components-hover-color;
+  }
+
+  //页面选择文本颜色
+  ::selection {
+    background: @other-page-selection;
+  }
+
+  //表格内部列高亮
+  .columnLight {
+    color: @other-table-column-light-color;
+  }
+
+  .data-dictionary .data-dictionary-right {
+    border-left: 10px solid @components-bg-text-color;
+  }
+
+  // 复写tranfarDown 组件的底色
+  .fade-layout {
+    background: @components-bg-text-color;
+  }
+
+  /*覆盖关联信息标底色与字体颜色*/
+  .fade-button {
+    //background: #70c4f5;
+    background-color: @page-footer-bg;
+    color: @components-bg-text-color;
+    .anticon {
+      color: @components-bg-text-color;
+    }
+  }
+
+  // 数据读取页面 taskListTitle的样式颜色
+  .taskListTitle,.readFileContent .realFileLeft .mustCondition {
+    color:  @text-color-sofa!important;
+  }
+
+  //case与settle工程页面form表单内部的标题
+  .formContanierBody {
+    border: 4px solid @components-border-hover-color !important;
+    .title {
+      background: @components-border-hover-color !important;
+      color: @components-bg-text-color;
+    }
+  }
+
+  .readFileContent .realFileLeft .mustCondition {
+    width: 100px;
+  }
+  //控制页面无权限提示样式
+ .no-auth {
+  font-size: 25px;
+  color: red;
+  padding: 30px;
+ }
+
+
+}

@@ -1,0 +1,311 @@
+// @import 'indexs.less';
+@import './theme.less';
+@import './base.less';
+@import './customAntd.less';
+@import './layout.less';
+@import 'theme/index';
+@import 'theme/select';
+@import 'theme/calendar';
+@import './colorFunc.less';
+
+#commonThemes,
+.commonThemes {
+  height: 100vh;
+  //background: #fff !important; //更换主题也需要换此颜色，因在函数内控制body的样式，会带有函数前缀（xxxTheme body 非 body），控制不到函数外部的body
+}
+
+.sofaTheme {
+  // antd样式变量
+  @success-color: #52c41a; // 成功色
+  @warning-color: #faad14; // 警告色
+  @error-color: #f5222d; // 错误色
+  @scroll-color: #c1c1c1;
+
+  // 布局相关样式变量，做加法，之后尝试做减法
+  @text-color-sofa: hsl(0, 0%, 0%); //文本色
+  @portal-header-bg: #153b77; //门户头部背景色
+  @portal-tabs-bg: #718bb9; //门户Tabs背景色
+  @page-footer-bg: #153b77; //页面底部色
+
+  @components-bg-text-color: #ffffff; //组件背景色或者文本
+  @component-bg-secondary: #1976de;
+  @components-bg-text-color: #fff; //组件背景色或者是文本色
+  @components-hover-color: #196ac4; //组件hover颜色
+  @components-disabled-color: #eaeaea; //组件禁用颜色
+  @components-placeholder-color: #888888; //组件placeholder文本颜色
+  @components-active-color: #153b77; //组件激活状态颜色
+  @components-header-bg: #c3d9f2; //组件头部背景色
+  @components-header-text-color:hsl(0, 0%, 0%);//组件头部文本颜色
+  @components-border-color: gray; //组件边框线颜色
+  @components-border-hover-color: #98c0f3; //组件边框线hover色
+  @components-item-hover-color: #eeeeee; //组件子条目hover颜色
+  @components-divider-border-color: #e6eaef; //组件内部分割线
+  @icon-color-sofa: #153b77; // 图标背景相关
+
+  @other-tabs-active-color: #c3d9f2;
+  @other-header-bg: #153b77; //日期组件头部颜色
+  @other-button-bg: #eeeeee; //按钮背景色
+  @other-button-border-color: #d2d2d2; //按钮边框线
+  @other-button-bg-hover: #8fc0f4; //按钮hover背景色
+  @other-table-header-bg: #c3d9f2; //表格表头背景色
+  @other-portal-menu-bg: #bad2f0; //门户菜单背景色
+  @other-radio-border-color: #1976de; //radio边框线
+  @other-spin-bg-text-color: #98c0f3; //spin加载loading颜色
+  @other-tabs-border-color: #eeeeee; //tabs组件边框线
+  @other-page-selection: #153b77; //页面鼠标选取文字背景色
+  @other-table-column-light-color: #1976de; //表格某列高亮颜色
+  @other-table-scroll-bg: #e6eaef; //表格滚动条线
+  @other-bg-hover: #8fc0f4; //组件内部hover背景色
+  @other-color-hover: #1976de; //组件内部hover字体色
+
+  .colorFunc(
+    @components-bg-text-color,
+    @components-border-color,
+    @text-color-sofa,
+    @other-button-bg,
+    @other-button-border-color,
+    @other-button-bg-hover,
+    @components-disabled-color,
+    @components-active-color,
+    @icon-color-sofa,
+    @success-color,
+    @warning-color,
+    @error-color,
+    @scroll-color,
+    @components-placeholder-color,
+    @other-tabs-active-color,
+    @portal-header-bg,
+    @portal-tabs-bg,
+    @page-footer-bg,
+    @components-hover-color,
+    @components-header-bg,
+    @components-border-hover-color,
+    @other-table-header-bg,
+    @other-portal-menu-bg,
+    @other-radio-border-color,
+    @component-bg-secondary,
+    @other-spin-bg-text-color,
+    @components-item-hover-color,
+    @components-divider-border-color,
+    @other-page-selection,
+    @other-table-column-light-color,
+    @other-table-scroll-bg,
+    @other-bg-hover,
+    @other-color-hover,
+    @components-header-text-color
+  );
+}
+
+/* 青色 */
+.cyanStyle {
+  // antd样式变量
+  @success-color: #52c41a; // 成功色
+  @warning-color: #faad14; // 警告色
+  @error-color: #f5222d; // 错误色
+  @scroll-color: #c1c1c1;
+
+  // 布局相关样式变量，做加法，之后尝试做减法
+  @text-color-sofa: hsl(0, 0%, 0%); //文本色
+  // @portal-header-bg: #157715; //门户头部背景色
+  @portal-header-bg:#03b3b2; //门户头部背景色
+  @portal-tabs-bg: #39D9D9; //门户Tabs背景色#177715 #77b971
+  @page-footer-bg: #03b3b2; //页面底部色
+
+  @components-bg-text-color: red; //组件背景色或者文本
+  @component-bg-secondary: #017474;
+  @components-bg-text-color: #fff; //组件背景色或者是文本色
+  @components-hover-color: #046a6a; //组件hover颜色
+  @components-disabled-color: #eaeaea; //组件禁用颜色
+  @components-placeholder-color: #888888; //组件placeholder文本颜色
+  @components-active-color: #072b7d; //组件激活状态颜色
+  @components-header-bg: #03b3b2; //组件头部背景色
+  @components-header-text-color:hsl(0, 0%, 0%);//组件头部文本颜色
+  @components-border-color: #39D9D9; //组件边框线颜色
+  @components-border-hover-color: #64d9d9; //组件边框线hover色
+  @components-item-hover-color: #eeeeee; //组件子条目hover颜色
+  @components-divider-border-color: #e6eaef; //组件内部分割线
+  @icon-color-sofa: #03b3b2; // 图标背景相关#03b3b2 #1e7676
+
+  @other-tabs-active-color: #b5e4e4;
+  @other-header-bg: #153b77; //日期组件头部颜色
+  @other-button-bg: #b5e4e4; //按钮背景色
+  @other-button-border-color: #178e8e; //按钮边框线
+  @other-button-bg-hover: #046a6a ; //按钮hover背景色
+  @other-table-header-bg: #b5e4e4; //表格表头背景色
+  @other-portal-menu-bg: #a4e4f0; //门户菜单背景色
+  @other-radio-border-color: #69ebce; //radio边框线
+  @other-spin-bg-text-color: #98c0f3; //spin加载loading颜色
+  @other-tabs-border-color: #fff; //tabs组件边框线
+  @other-page-selection: #153b77; //页面鼠标选取文字背景色
+  @other-table-column-light-color: #ff7604; //表格某列高亮颜色
+  @other-table-scroll-bg: #b5e4e4; //表格滚动条线
+  @other-bg-hover: #64d9d9; //组件内部hover背景色
+  @other-color-hover: #3ce1b5; //组件内部hover字体色
+
+  .colorFunc(
+    @components-bg-text-color,
+    @components-border-color,
+    @text-color-sofa,
+    @other-button-bg,
+    @other-button-border-color,
+    @other-button-bg-hover,
+    @components-disabled-color,
+    @components-active-color,
+    @icon-color-sofa,
+    @success-color,
+    @warning-color,
+    @error-color,
+    @scroll-color,
+    @components-placeholder-color,
+    @other-tabs-active-color,
+    @portal-header-bg,
+    @portal-tabs-bg,
+    @page-footer-bg,
+    @components-hover-color,
+    @components-header-bg,
+    @components-border-hover-color,
+    @other-table-header-bg,
+    @other-portal-menu-bg,
+    @other-radio-border-color,
+    @component-bg-secondary,
+    @other-spin-bg-text-color,
+    @components-item-hover-color,
+    @components-divider-border-color,
+    @other-page-selection,
+    @other-table-column-light-color,
+    @other-table-scroll-bg,
+    @other-bg-hover,
+    @other-color-hover,
+    @components-header-text-color
+  );
+}
+
+.orangeTheme {
+  // antd样式变量
+  @success-color: #52c41a; // 成功色
+  @warning-color: #faad14; // 警告色
+  @error-color: #f5222d; // 错误色
+  @scroll-color: #c1c1c1;
+
+  // 布局相关样式变量，做加法，之后尝试做减法
+  @text-color-sofa: hsl(0, 0%, 0%); //文本色
+  @portal-header-bg: #ea5505; //门户头部背景色
+  @portal-tabs-bg: #ff8207; //门户Tabs背景色
+  @page-footer-bg: #ea5505; //页面底部色
+
+  @components-bg-text-color: #ffffff; //组件背景色或者文本
+  @component-bg-secondary: #ff8207; //分页背景色
+  @components-bg-text-color: #fff; //组件背景色或者是文本色
+  @components-hover-color: #ea5505; //组件hover颜色
+  @components-disabled-color: #eaeaea; //组件禁用颜色
+  @components-placeholder-color: #888888; //组件placeholder文本颜色
+  @components-active-color: #ea5505; //组件激活状态颜色
+  @components-header-text-color: #fff; //组件头部字体颜色
+  @components-header-bg: #ea5505; //组件头部背景色
+  @components-border-color: #d3d9e2; //组件边框线颜色
+  @components-border-hover-color: #ff8207; //组件边框线hover色
+  @components-item-hover-color: #eeeeee; //组件子条目hover颜色
+  @components-divider-border-color: #eae8eb; //组件内部分割线
+  @icon-color-sofa: #ff8207; // 图标背景相关
+  @components-header-close-btn-color: #fff; //组件头部关闭按钮
+
+  @other-tabs-active-color: #eeeeee;
+  @other-header-bg: #ea5505; //日期组件头部颜色
+  @other-button-bg: #eeeeee; //按钮背景色
+  @other-button-border-color: #d2d2d2; //按钮边框线
+  @other-button-bg-hover: #ea5505; //按钮hover背景色
+  @other-table-header-bg: #e6eaef; //表格表头背景色
+  @other-portal-menu-bg: #bad2f0; //门户菜单背景色
+  @other-radio-border-color: #ff8207; //radio边框线
+  @other-spin-bg-text-color: #ea5505; //spin加载loading颜色
+  @other-tabs-border-color: #eeeeee; //tabs组件边框线
+  @other-page-selection: #ea5505; //页面鼠标选取文字背景色
+  @other-table-column-light-color: #ff8207; //表格某列高亮颜色
+  @other-table-scroll-bg: #e6eaef; //表格滚动条线
+  @other-bg-hover: #f4eff3; //组件内部hover背景色
+  @other-color-hover: #ff8207; //组件内部hover字体色
+
+  .colorFunc(
+    @components-bg-text-color,
+    @components-border-color,
+    @text-color-sofa,
+    @other-button-bg,
+    @other-button-border-color,
+    @other-button-bg-hover,
+    @components-disabled-color,
+    @components-active-color,
+    @icon-color-sofa,
+    @success-color,
+    @warning-color,
+    @error-color,
+    @scroll-color,
+    @components-placeholder-color,
+    @other-tabs-active-color,
+    @portal-header-bg,
+    @portal-tabs-bg,
+    @page-footer-bg,
+    @components-hover-color,
+    @components-header-bg,
+    @components-border-hover-color,
+    @other-table-header-bg,
+    @other-portal-menu-bg,
+    @other-radio-border-color,
+    @component-bg-secondary,
+    @other-spin-bg-text-color,
+    @components-item-hover-color,
+    @components-divider-border-color,
+    @other-page-selection,
+    @other-table-column-light-color,
+    @other-table-scroll-bg,
+    @other-bg-hover,
+    @other-color-hover,
+    @components-header-text-color
+  );
+}
+
+// .redTheme {
+//   @components-bg-text-color: #ffffff;
+//   @bg-grey-white-sofa: #fdf0f3;
+//   @components-border-color: gray;
+//   @text-dark-sofa: #640b0b;
+//   @text-color-sofa: hsl(0, 0%, 0%);
+//   @other-button-bg: #dddddd;
+//   @other-button-border-color: #b0b0b0;
+//   @other-button-bg-hover: #f48fa0;
+//   @components-disabled-color: #eaeaea;
+//   @components-header-bg: #edc7ca;
+//   @button-group-sofa: #ff073d;
+//   @components-active-color: #7e4851;
+//   @unactive-sofa: #ca878c;
+//   @tabs-nav-wrap-sofa: #f3d5dd;
+
+//   // 图标背景相关
+//   @icon-color-sofa: #8f3a3a;
+//   // antd样式变量
+//   @success-color: #52c41a; // 成功色
+//   @warning-color: #faad14; // 警告色
+//   @error-color: #f5222d; // 错误色
+//   @scroll-color: #c1c1c1;
+
+//   .colorFunc(
+//     @components-bg-text-color,
+//     @bg-grey-white-sofa,
+//     @components-border-color,
+//     @text-dark-sofa,
+//     @text-color-sofa,
+//     @other-button-bg,
+//     @other-button-border-color,
+//     @other-button-bg-hover,
+//     @components-disabled-color,
+//     @components-header-bg,
+//     @button-group-sofa,
+//     @components-active-color,
+//     @unactive-sofa,
+//     @tabs-nav-wrap-sofa,
+//     @icon-color-sofa,
+//     @success-color,
+//     @warning-color,
+//     @error-color,
+//     @scroll-color,
+//   );
+// }

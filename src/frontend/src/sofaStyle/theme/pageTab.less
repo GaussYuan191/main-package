@@ -1,0 +1,30 @@
+.pageTab(
+  @portal-nav-bg
+  ) {
+  .ant-tabs-bar {
+    border-bottom: none !important;
+  }
+  .ant-tabs-card {
+    .ant-tabs-nav-container {
+      > .ant-tabs-nav-wrap {
+        background-color: @portal-nav-bg;
+        border: 1px solid @portal-nav-bg;
+        .ant-tabs-nav {
+          background-color: transparent;
+        }
+        .ant-tabs-tab {
+          background-color: transparent;
+          border-color: transparent;
+          height: 28px;
+          line-height: 28px;
+          margin-top: 2px;
+          //color: @ant-tabs-tab-color-sofa;
+          border-radius: 14px;
+          &.ant-tabs-tab-active {
+            //background-color: @ant-tabs-tab-active-bg-sofa;
+          }
+        }
+      }
+    }
+  }
+}

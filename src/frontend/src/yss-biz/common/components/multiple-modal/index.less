@@ -1,0 +1,30 @@
+.flexModal{
+    position: fixed;
+    border:1px solid #666;
+    border-radius: 5px;
+    background: #0B1431;
+    .headContent{
+        display: flex;
+        height: 36px;
+        line-height: 36px;
+        justify-content:space-between;
+        border-bottom: 1px solid #666666;
+        padding: 0 15px;
+        font-weight: bold;
+        .headOperate{
+            height: 100%;
+            line-height: 36px;
+            text-align: center;
+            .operateItem{
+                cursor: pointer;
+                margin-left:10px;
+            }
+        }
+    }
+    .headContent:active{
+        cursor: move;
+    }
+    .formBody{
+        padding: 15px;
+    }
+}

@@ -1,0 +1,10 @@
+.calendar-date {
+  text-align: center;
+}
+
+.tips .calendar-date.calendarActive {
+  background: #d1640d !important;
+}
+.sofaTheme .calendar-date {
+  background-color: white !important;
+}

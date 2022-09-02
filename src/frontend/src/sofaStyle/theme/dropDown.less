@@ -1,0 +1,19 @@
+.dropdown(
+  @components-bg-text-color,
+  @text-color-sofa,
+  @components-hover-color
+  ) {
+  .ant-dropdown-menu-item {
+    background-color: @components-bg-text-color !important;
+    color: @text-color-sofa;
+    &:hover {
+      color: @components-hover-color;
+    }
+  }
+
+  .more-select .ant-dropdown-menu,
+  .ant-dropdown-menu {
+    background-color: @components-bg-text-color !important;
+  }
+
+}
